@@ -1,11 +1,17 @@
 name: Codecov Demo
 
+#on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
 on:
   push:
-    branches: [ "master" ]
+    branches:
+        ["master", fix/addingTests]
   pull_request:
-    branches: [ "master" ]
-
+    branches:
+        ["master", fix/addingTests]
 jobs:
   build:
     runs-on: macOS-latest
